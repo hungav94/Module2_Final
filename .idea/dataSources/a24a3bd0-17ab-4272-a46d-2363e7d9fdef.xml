@@ -1186,166 +1186,113 @@
     <table id="303" parent="11" name="hibernate_sequence">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="304" parent="11" name="product">
+    <table id="304" parent="11" name="producttype">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="305" parent="11" name="producttype">
+    <table id="305" parent="11" name="producttype_product">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="306" parent="11" name="producttype_product">
-      <Engine>MyISAM</Engine>
-    </table>
-    <column id="307" parent="300" name="id">
+    <column id="306" parent="300" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="300" name="content">
+    <column id="307" parent="300" name="content">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="300" name="description">
+    <column id="308" parent="300" name="description">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="300" name="name">
+    <column id="309" parent="300" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="300" name="id_category">
+    <column id="310" parent="300" name="id_category">
       <Position>5</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="312" parent="300" name="FKckiy7jx9dkamj4i4io7bamqif">
+    <index id="311" parent="300" name="FKckiy7jx9dkamj4i4io7bamqif">
       <ColNames>id_category</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="313" parent="300" name="PRIMARY">
+    <key id="312" parent="300" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="314" parent="301" name="id">
+    <column id="313" parent="301" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="301" name="nameCategory">
+    <column id="314" parent="301" name="nameCategory">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="316" parent="301" name="PRIMARY">
+    <key id="315" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="317" parent="302" name="next_val">
+    <column id="316" parent="302" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="303" name="next_val">
+    <column id="317" parent="303" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="304" name="id">
+    <column id="318" parent="304" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="304" name="code">
+    <column id="319" parent="304" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="304" name="date">
-      <Position>3</Position>
-      <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="322" parent="304" name="description">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="323" parent="304" name="name">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="324" parent="304" name="price">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="325" parent="304" name="quantity">
-      <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="326" parent="304" name="productTypeId">
-      <Position>8</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="327" parent="304" name="FKcfw4nys01rhouv4c369adnc3s">
-      <ColNames>productTypeId</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="328" parent="304" name="PRIMARY">
+    <key id="320" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="329" parent="305" name="id">
+    <column id="321" parent="305" name="ProductType_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="305" name="name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="331" parent="305" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="332" parent="306" name="ProductType_id">
-      <Position>1</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="333" parent="306" name="products_id">
+    <column id="322" parent="305" name="products_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="334" parent="306" name="UK_4m73qme2o0byf6ulvhex22q">
+    <index id="323" parent="305" name="UK_4m73qme2o0byf6ulvhex22q">
       <ColNames>products_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="335" parent="306" name="PRIMARY">
+    <key id="324" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ProductType_id
 products_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="336" parent="306" name="UK_4m73qme2o0byf6ulvhex22q">
+    <key id="325" parent="305" name="UK_4m73qme2o0byf6ulvhex22q">
       <ColNames>products_id</ColNames>
       <UnderlyingIndexName>UK_4m73qme2o0byf6ulvhex22q</UnderlyingIndexName>
     </key>

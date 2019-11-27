@@ -2,6 +2,8 @@ package com.codegym.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.sql.Date;
 
@@ -11,13 +13,18 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @NotEmpty
+    @NotNull
     private String code;
+    @NotEmpty
+    @NotNull
     @Size(min = 2, max = 20)
     private String name;
-
+    @NotEmpty
+    @NotNull
     @Min(0)
     private String price;
-
+    @NotNull
     @Min(0)
     private String quantity;
     private Date date;
