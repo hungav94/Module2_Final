@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Product</title>
+</head>
+<body>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/edit-product}" th:object="${product}" method="post">
+<h1>Chỉnh sửa mặt hàng <span th:field="*{name}"></span></h1>
+    <input type="hidden" th:field="*{id}">
+    <table>
+        <tr>
+            <td>Tên hàng:</td>
+            <td><input type="text" th:field="*{name}"></td>
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
+        </tr>
+        <tr>
+            <td>Loại hàng:</td>
+            <td>
+                <select th:field="*{productType}">
+                    <option th:each="p : ${productTypes}" th:value="${p.id}" th:text="${p.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Giá:</td>
+            <td><input type="number" th:field="*{price}"></td>
+            <td th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price error</td>
+        </tr>
+        <tr>
+            <td>Số lượng:</td>
+            <td><input type="number" th:field="*{quantity}"></td>
+            <td th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}">Price error</td>
+        </tr>
+        <tr>
+            <td>Mô tả:</td>
+            <td><textarea th:field="*{description}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Sửa mặt hàng">
+                <a href="/product">Thoát</a>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
